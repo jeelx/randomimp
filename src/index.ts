@@ -1,0 +1,1 @@
+import './typescript/gui/view/MainView';
