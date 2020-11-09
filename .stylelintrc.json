@@ -1,5 +1,5 @@
 {
-    "plugins": ["stylelint-order", "stylelint-scss"],
+    "plugins": ["stylelint-order", "stylelint-scss", "stylelint-prettier"],
     "rules": {
       "at-rule-disallowed-list": ["debug"],
       "at-rule-no-unknown": null,

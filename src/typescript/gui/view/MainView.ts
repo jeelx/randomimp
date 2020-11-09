@@ -1,7 +1,7 @@
 import { css, customElement, html, LitElement, TemplateResult } from 'lit-element';
 import styles from '../../../resource/styles/view/main-view.scss';
 
-@customElement('main-view')
+@customElement('randomimp-mainview')
 class MainView extends LitElement {
     static get styles(): any {
         return css([styles]);
