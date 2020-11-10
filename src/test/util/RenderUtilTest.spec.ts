@@ -10,8 +10,9 @@ describe('RenderUtilTest', () => {
         }
     });
 
-    it('should get Instance', () => { 
+    it('should get Instance', () => {
         const util = RenderUtil.get();
         expect(util).toBeInstanceOf(RenderUtil);
-    })
+    });
+
 });
