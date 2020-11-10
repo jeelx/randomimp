@@ -4,7 +4,7 @@ describe('RenderUtilTest', () => {
 
     it('should be a singleton', () => { 
         try {
-            new RenderUtil();
+            const rendererUtil: RenderUtil = new RenderUtil();
         } catch(e: Error) {
             expect(true).toBeTruthy();
         }

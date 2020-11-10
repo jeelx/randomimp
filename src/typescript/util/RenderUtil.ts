@@ -1,10 +1,10 @@
 class RenderUtil { 
     private static INSTANCE: RenderUtil;
 
-    private constructor() {}
+    private constructor() { }
 
     public static get(): RenderUtil { 
-        if (!this.INSTANCE) { 
+        if (!this.INSTANCE) {
             this.INSTANCE = new RenderUtil();
         }
         return this.INSTANCE;

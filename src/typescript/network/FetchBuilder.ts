@@ -1,3 +1,4 @@
+// tslint:disable-next-line: no-implicit-dependencies
 import axios, { AxiosInstance } from 'axios';
 import Logger from '../util/Logger';
 

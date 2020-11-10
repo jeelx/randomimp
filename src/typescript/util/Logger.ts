@@ -19,18 +19,21 @@ class Logger {
 
     public debug(...msg: any): void { 
         if (this.logLevel < 2) { 
+            // tslint:disable-next-line: no-console
             console.debug(...msg);
         }
     }
 
     public info(...msg: any): void { 
         if (this.logLevel === 0) {
+            // tslint:disable-next-line: no-console
             console.info(...msg);
         }
     }
 
     public error(...msg: any): void { 
         if (this.logLevel < 3) {
+            // tslint:disable-next-line: no-console
             console.error(...msg);
         }
     }
