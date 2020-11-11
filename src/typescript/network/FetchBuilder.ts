@@ -132,7 +132,7 @@ class FetchBuilder {
         let pathname: string;
         try {
             pathname = new URL(this.url).pathname;
-        } catch (e: Error) { 
+        } catch (e: any) { 
             pathname = this.url;
         }
         return pathname;
