@@ -1,12 +1,13 @@
 class Communicator { 
-    private static INSTANCE: Communicator;
+    private static INSTANCE: Communicator = new Communicator();
 
-    private constructor() { }
+    private constructor() {
+        if (Communicator.INSTANCE) { 
+            throw new Error('Diese Klasse ist ein Singleton. Nutze Communicator.get()!');
+        }
+     }
 
     public static get(): Communicator { 
-        if (!this.INSTANCE) { 
-            this.INSTANCE = new Communicator();
-        }
         return this.INSTANCE;
     }
 }

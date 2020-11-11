@@ -24,6 +24,14 @@ describe('LoggerTest', () => {
         expect(console.debug.mock.calls[0][0]).toBe('DebugLog');
     });
 
+    it('should log warn', () => {
+        // tslint:disable-next-line: no-console
+        console.warn = jest.fn();
+        Logger.get().warn('WarnLog');
+        // tslint:disable-next-line: no-console
+        expect(console.warn.mock.calls[0][0]).toBe('WarnLog');
+    });
+
     it('should log info', () => {
         // tslint:disable-next-line: no-console
         console.info = jest.fn();

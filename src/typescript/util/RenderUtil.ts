@@ -1,12 +1,13 @@
 class RenderUtil { 
-    private static INSTANCE: RenderUtil;
+    private static INSTANCE: RenderUtil = new RenderUtil();
 
-    private constructor() { }
+    private constructor() { 
+        if (RenderUtil.INSTANCE) { 
+            throw new Error('Diese Klasse ist ein Singleton. Nutze RenderUtil.get()!');
+        }
+    }
 
     public static get(): RenderUtil { 
-        if (!this.INSTANCE) {
-            this.INSTANCE = new RenderUtil();
-        }
         return this.INSTANCE;
     }
 }

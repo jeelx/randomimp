@@ -2,18 +2,18 @@ import LogLevel from "../interface/LogLevel";
 
 class Logger { 
 
-    private static INSTANCE: Logger;
+    private static INSTANCE: Logger = new Logger();
     private logLevel: LogLevel;
 
     private constructor() { 
+        if (Logger.INSTANCE) { 
+            throw new Error('Diese Klasse ist ein Singleton. Nutze Logger.get()!');
+        }
         // Default Einstellung
         this.logLevel = LogLevel.INFO;
     }
 
     public static get(): Logger { 
-        if (!this.INSTANCE) { 
-            this.INSTANCE = new Logger();
-        }
         return this.INSTANCE;
     }
 
@@ -35,6 +35,13 @@ class Logger {
         if (this.logLevel < 3) {
             // tslint:disable-next-line: no-console
             console.error(...msg);
+        }
+    }
+
+    public warn(...msg: any): void { 
+        if (this.logLevel < 3) {
+            // tslint:disable-next-line: no-console
+            console.warn(...msg);
         }
     }
 
