@@ -1,0 +1,27 @@
+@import '../common/reset';
+
+.randomimp-badge {
+  align-items: center;
+  background-color: var(--randomimp-background, #0066b3);
+  border-radius: 100%;
+  border-width: 1px;
+  display: flex;
+  height: 25px;
+  justify-content: center;
+  width: 25px;
+
+  .randomimp-widgetsize-large {
+    height: 50px;
+    width: 50px;
+  }
+
+  .randomimp-widgetsize-medium {
+    height: 35px;
+    width: 35px;
+  }
+
+  .randomimp-badge-text {
+    color: #fff;
+    font-size: 16px;
+  }
+}

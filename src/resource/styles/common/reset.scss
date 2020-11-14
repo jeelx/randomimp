@@ -55,8 +55,10 @@ section,
 video {
   border: 0;
   font: inherit;
+  font-family: fa5-proxima-nova,'Helvetica Neue',Helvetica,Arial,sans-serif;
   font-size: 100%;
   -webkit-font-smoothing: antialiased;
+  font-weight: 600;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
@@ -88,3 +90,7 @@ table { border-collapse: collapse;
 
 input { appearance: none;
   border-radius: 0; }
+
+input:focus {
+  outline: none;
+}

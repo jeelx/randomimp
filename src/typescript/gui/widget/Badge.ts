@@ -1,28 +1,21 @@
-import { css, customElement, html, LitElement, property, TemplateResult } from 'lit-element';
+import { css, customElement, html, property, TemplateResult, unsafeCSS } from 'lit-element';
 import styles from '../../../resource/styles/widget/badge.scss';
-import WidgetSize from "../../interface/WidgetSize";
+import AbstractWidget from '../AbstractWidget';
 
 @customElement('randomimp-badge')
-class Badge extends LitElement {
+class Badge extends AbstractWidget {
 
     @property({ type: Number })
     public count: number;
 
-    @property({ type: Object })
-    public size: WidgetSize;
-
     public static get styles(): any { 
-        return css([styles]);
-    }
-
-    public getWidgetSizeStyle(): string { 
-        return this.size ? `randomimp-widgetsize-${this.size}` : '';
+        return css`${unsafeCSS(styles)}`;
     }
 
     public render(): TemplateResult { 
         return html`
-            <div id="widget" class="${''.concat('randomimp-badge', this.getWidgetSizeStyle())}">
-                <div id="text">
+            <div id="widget" class="${this.concatClassnames('randomimp-badge', this.getWidgetSizeStyle())}">
+                <div id="text" class="randomimp-badge-text">
                     ${this.count}
                 </div>
             </div>
