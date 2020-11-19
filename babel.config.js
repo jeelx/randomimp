@@ -1,7 +1,12 @@
 const testConfig = {
   "presets": [
     [
-      "@babel/preset-env",
+      "@babel/env",
+      {
+        targets: {
+          node: 'current'
+        },
+      }
     ],  
     "@babel/preset-typescript"
   ],
@@ -11,10 +16,11 @@ const testConfig = {
     "@babel/plugin-proposal-object-rest-spread",
     "@babel/plugin-proposal-nullish-coalescing-operator",
     ["@babel/plugin-proposal-decorators",{"legacy": true}],
-    ["@babel/plugin-proposal-class-properties", {"loose": true}],
+    ["@babel/plugin-proposal-class-properties", { "loose": true }],
+    "@babel/plugin-transform-classes",
     "syntax-async-functions",
-    "@babel/proposal-async-generator-functions",
     "@babel/plugin-transform-async-to-generator",
+    ["@babel/plugin-transform-for-of", { "assumeArray": true }],
     "@babel/plugin-transform-runtime"
   ]
 };

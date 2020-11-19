@@ -8,12 +8,9 @@ class Badge extends AbstractWidget {
     @property({ type: Number })
     public count: number;
 
-    public static get styles(): any { 
-        return css`${unsafeCSS(styles)}`;
-    }
-
     public render(): TemplateResult { 
         return html`
+            <style>${styles}</style>
             <div id="widget" class="${this.concatClassnames('randomimp-badge', this.getWidgetSizeStyle())}">
                 <div id="text" class="randomimp-badge-text">
                     ${this.count}
