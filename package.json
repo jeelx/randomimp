@@ -8,7 +8,6 @@
     "dev:gui": "webpack serve --mode=development",
     "dev:server": "nodemon ./src/javascript/server/server.js",
     "server": "node ./src/javascript/server/server.js",
-    "test:watch": "jest --watch",
     "stylelint": "stylelint **/*.scss --fix",
     "tslint": "tslint -c tslint.json 'src/**/*.ts'",
     "dev:theme": "node-sass ./src/resource/theme -w -o dist/theme --source-map true",
