@@ -1,0 +1,35 @@
+@import '../common/reset';
+
+.randomimp-buttongroup {
+  align-items: center;
+  background-color: var(--randomimp-background, #0066b3);
+  border-radius: 5px;
+  border-width: 1px;
+  display: flex;
+  height: 25px;
+
+  .randomimp-widgetsize-large {
+    height: 50px;
+  }
+    
+  .randomimp-widgetsize-medium {
+    height: 35px;
+  }
+
+  .randomimp-buttongroup-item {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+
+    .randomimp-buttongroup-item-text {
+      color: #fff;
+      font-size: 16px;
+    }
+
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

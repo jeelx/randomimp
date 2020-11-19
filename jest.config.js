@@ -14,7 +14,13 @@ module.exports = {
   coverageDirectory: "coverage",
   // An array of regexp pattern strings used to skip coverage collection
   coveragePathIgnorePatterns: [
-    "/node_modules/"
+    "/node_modules/",
+    "/src/javascript/",
+    "/src/typescript/interface/",
+    "/src/test/",
+    "/src/stories/",
+    "/src/resources/"
+
   ],
   // Indicates which provider should be used to instrument code for coverage
   coverageProvider: "v8",
@@ -49,6 +55,9 @@ module.exports = {
   notifyMode: "always",
   // Use this configuration option to add custom reporters to Jest
   reporters: ["default"],
+  setupFilesAfterEnv: [
+    '<rootDir>/setupJest.js'
+  ],
   // The test environment that will be used for testing
   testEnvironment: "jsdom",
   testRegex: "(/^spec/.*|\\.(test|spec))\\.(ts)$",
@@ -62,10 +71,10 @@ module.exports = {
   },
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   transformIgnorePatterns: [
-    "node_modules/(?!(lit-element|lit-html)/)"
+    //"node_modules/(?!(lit-element|lit-html)/)"
   ],
   // Indicates whether each individual test should be reported during the run
   verbose: true,
   // Whether to use watchman for file crawling
-  watchman: true
+  //watchman: true
 };

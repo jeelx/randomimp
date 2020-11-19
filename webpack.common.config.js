@@ -16,7 +16,7 @@ const babelLoader = {// this rule handles TypeScript from src via ts-loader and 
 };
 //
 const styleLoader = { // this rule handles CSS prefixing and SCSS -> CSS compilation
-  test: /\.scss$/,
+  test: /\.(scss)$/,
   use: [
     'to-string-loader',
     {

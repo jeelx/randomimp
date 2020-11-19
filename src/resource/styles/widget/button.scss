@@ -1,0 +1,28 @@
+@import '../common/reset';
+
+.randomimp-button {
+  align-items: center;
+  background-color: var(--randomimp-background, #0066b3);
+  border-radius: 5px;
+  border-width: 1px;
+  display: flex;
+  height: 25px;
+  justify-content: center;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  .randomimp-widgetsize-large {
+    height: 50px;
+  }
+
+  .randomimp-widgetsize-medium {
+    height: 35px;
+  }
+
+  .randomimp-button-text {
+    color: #fff;
+    font-size: 16px;
+  }
+}
