@@ -15,7 +15,9 @@ class Button extends AbstractWidget {
         return html`
         <style>${styles}</style>
             <button id="widget" class="${this.concatClassnames('randomimp-button', this.getWidgetSizeStyle())}" @click=${() => this.click()}>
-                 <div id="text" class="randomimp-button-text">${this.text}</div>   
+                <div id="text" class="randomimp-button-text">
+                    ${this.text}
+                </div>   
                  <div id="icon"></div>
             </button>
         `;
