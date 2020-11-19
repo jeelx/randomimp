@@ -8,12 +8,9 @@ class Numericfield extends AbstractWidget {
     @property({ type: Number })
     public text: number = 15;
 
-    public static get styles(): any { 
-        return css`${unsafeCSS(styles)}`;
-    }
-
     public render(): TemplateResult { 
         return html`
+            <style>${styles}</style>
             <div id="widget" class=${this.concatClassnames('randomimp-numericfield', this.getWidgetSizeStyle())}>
                 <input type="number" id="field" class="randomimp-numericfield-field"
                     value=${this.text ? this.text : ''}>

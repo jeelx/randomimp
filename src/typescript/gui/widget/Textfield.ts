@@ -8,12 +8,9 @@ class Textfield extends AbstractWidget {
     @property({ type: String })
     public text: string = 'Test';
 
-    public static get styles(): any { 
-        return css`${unsafeCSS(styles)}`;
-    }
-
     public render(): TemplateResult { 
         return html`
+            <style>${styles}</style>
             <div id="widget" class=${this.concatClassnames('randomimp-textfield', this.getWidgetSizeStyle())}>
                 <input type="text" id="field" class="randomimp-textfield-field"
                     value=${this.text ? this.text : ''}>

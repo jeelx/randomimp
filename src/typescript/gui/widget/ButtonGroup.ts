@@ -35,13 +35,10 @@ class ButtonGroup extends AbstractWidget {
             }
     ];
 
-    public static get styles(): any { 
-        return css`${unsafeCSS(styles)}`;
-    }
-
     public render(): TemplateResult {
         const actions: TemplateResult[] = this.actions.map((action: ButtonGroupAction) => {
             return html`
+            <style>${styles}</style>
             <div class="randomimp-buttongroup-item" @click=${() => action.click()}>
                 <div class="randomimp-buttongroup-item-text">
                     ${action.text}
