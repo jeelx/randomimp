@@ -3,6 +3,7 @@ import AbstractWidget from "../AbstractWidget";
 import styles from '../../../resource/styles/widget/buttongroup.scss';
 import ButtonGroupAction from "../../interface/ButtonGroupAction";
 import Logger from "../../util/Logger";
+import InternalWidgetID from "./InternalWidgetId";
 
 @customElement('randomimp-buttongroup')
 class ButtonGroup extends AbstractWidget { 
@@ -46,7 +47,7 @@ class ButtonGroup extends AbstractWidget {
             </div>`
         });
         return html`
-            <div id="widget" class="${this.concatClassnames('randomimp-buttongroup', this.getWidgetSizeStyle())}">
+            <div id=${InternalWidgetID.WIDGET} class="${this.concatClassnames('randomimp-buttongroup', this.getWidgetSizeStyle())}">
                 ${actions}
             </div>
         `;

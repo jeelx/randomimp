@@ -1,3 +1,4 @@
+import InternalWidgetID from '../../../typescript/gui/widget/InternalWidgetId';
 import Textfield from '../../../typescript/gui/widget/Textfield';
 import WidgetSize from '../../../typescript/interface/WidgetSize';
 
@@ -12,7 +13,7 @@ describe('Textfield', () => {
         widget.size = WidgetSize.LARGE;
         window.document.body.appendChild(widget);
         await widget.updateComplete;
-        expect(widget.shadowRoot.getElementById('widget').className).toContain('randomimp-textfield');
-        expect(widget.shadowRoot.getElementById('widget').className).toContain('randomimp-widgetsize-large');
+        expect(widget.shadowRoot.getElementById(InternalWidgetID.WIDGET).className).toContain('randomimp-textfield');
+        expect(widget.shadowRoot.getElementById(InternalWidgetID.WIDGET).className).toContain('randomimp-widgetsize-large');
     });
 })

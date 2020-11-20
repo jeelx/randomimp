@@ -1,6 +1,7 @@
 import { css, customElement, html, property, TemplateResult, unsafeCSS } from 'lit-element';
 import styles from '../../../resource/styles/widget/button.scss';
 import AbstractWidget from '../AbstractWidget';
+import InternalWidgetID from './InternalWidgetId';
 
 @customElement('randomimp-button')
 class Button extends AbstractWidget {
@@ -14,8 +15,8 @@ class Button extends AbstractWidget {
     public render(): TemplateResult {
         return html`
         <style>${styles}</style>
-            <button id="widget" class="${this.concatClassnames('randomimp-button', this.getWidgetSizeStyle())}" @click=${() => this.click()}>
-                <div id="text" class="randomimp-button-text">
+            <button id=${InternalWidgetID.WIDGET} class="${this.concatClassnames('randomimp-button', this.getWidgetSizeStyle())}" @click=${() => this.click()}>
+                <div id=${InternalWidgetID.TEXT} class="randomimp-button-text">
                     ${this.text}
                 </div>   
                  <div id="icon"></div>

@@ -1,4 +1,5 @@
 import ButtonGroup from '../../../typescript/gui/widget/ButtonGroup';
+import InternalWidgetID from '../../../typescript/gui/widget/InternalWidgetId';
 import WidgetSize from '../../../typescript/interface/WidgetSize';
 
 describe('ButtonGroup', () => { 
@@ -12,7 +13,7 @@ describe('ButtonGroup', () => {
         widget.size = WidgetSize.LARGE;
         window.document.body.appendChild(widget);
         await widget.updateComplete;
-        expect(widget.shadowRoot.getElementById('widget').className).toContain('randomimp-buttongroup');
-        expect(widget.shadowRoot.getElementById('widget').className).toContain('randomimp-widgetsize-large');
+        expect(widget.shadowRoot.getElementById(InternalWidgetID.WIDGET).className).toContain('randomimp-buttongroup');
+        expect(widget.shadowRoot.getElementById(InternalWidgetID.WIDGET).className).toContain('randomimp-widgetsize-large');
     });
 })

@@ -1,4 +1,5 @@
 import Button from '../../../typescript/gui/widget/Button';
+import InternalWidgetID from '../../../typescript/gui/widget/InternalWidgetId';
 import WidgetSize from '../../../typescript/interface/WidgetSize';
 
 describe('Button', () => { 
@@ -15,9 +16,9 @@ describe('Button', () => {
         widget.click = clickMock;
         window.document.body.appendChild(widget);
         await widget.updateComplete;
-        expect(widget.shadowRoot.getElementById('text').innerHTML.trim()).toBe('Buttontext');
-        expect(widget.shadowRoot.getElementById('text').className).toBe('randomimp-button-text');
-        expect(widget.shadowRoot.getElementById('widget').className).toContain('randomimp-button');
-        expect(widget.shadowRoot.getElementById('widget').className).toContain('randomimp-widgetsize-large');
+        expect(widget.shadowRoot.getElementById(InternalWidgetID.TEXT).innerHTML.trim()).toBe('Buttontext');
+        expect(widget.shadowRoot.getElementById(InternalWidgetID.TEXT).className).toBe('randomimp-button-text');
+        expect(widget.shadowRoot.getElementById(InternalWidgetID.WIDGET).className).toContain('randomimp-button');
+        expect(widget.shadowRoot.getElementById(InternalWidgetID.WIDGET).className).toContain('randomimp-widgetsize-large');
     });
 })

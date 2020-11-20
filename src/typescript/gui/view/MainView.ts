@@ -15,6 +15,7 @@ class MainView extends LitElement {
                 <randomimp-buttongroup></randomimp-buttongroup>
                 <randomimp-numericfield></randomimp-numericfield>
                 <randomimp-textfield></randomimp-textfield>
+                <randomimp-headline title="Headline" subtitle="SubTitle"></randomimp-headline>
             </div>
         `;
     }

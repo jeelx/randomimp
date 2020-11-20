@@ -1,4 +1,5 @@
 import Badge from '../../../typescript/gui/widget/Badge';
+import InternalWidgetID from '../../../typescript/gui/widget/InternalWidgetId';
 import WidgetSize from '../../../typescript/interface/WidgetSize';
 
 describe('Badge', () => { 
@@ -13,9 +14,9 @@ describe('Badge', () => {
         widget.size = WidgetSize.LARGE;
         window.document.body.appendChild(widget);
         await widget.updateComplete;
-        expect(widget.shadowRoot.getElementById('text').innerHTML.trim()).toBe('3');
-        expect(widget.shadowRoot.getElementById('text').className).toBe('randomimp-badge-text');
-        expect(widget.shadowRoot.getElementById('widget').className).toContain('randomimp-badge');
-        expect(widget.shadowRoot.getElementById('widget').className).toContain('randomimp-widgetsize-large');
+        expect(widget.shadowRoot.getElementById(InternalWidgetID.TEXT).innerHTML.trim()).toBe('3');
+        expect(widget.shadowRoot.getElementById(InternalWidgetID.TEXT).className).toBe('randomimp-badge-text');
+        expect(widget.shadowRoot.getElementById(InternalWidgetID.WIDGET).className).toContain('randomimp-badge');
+        expect(widget.shadowRoot.getElementById(InternalWidgetID.WIDGET).className).toContain('randomimp-widgetsize-large');
     });
 })

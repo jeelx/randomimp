@@ -1,3 +1,4 @@
+import InternalWidgetID from '../../../typescript/gui/widget/InternalWidgetId';
 import Numericfield from '../../../typescript/gui/widget/Numericfield';
 import WidgetSize from '../../../typescript/interface/WidgetSize';
 
@@ -12,8 +13,8 @@ describe('Numericfield', () => {
         widget.size = WidgetSize.LARGE;
         window.document.body.appendChild(widget);
         await widget.updateComplete;
-        expect(widget.shadowRoot.getElementById('widget').className).toContain('randomimp-numericfield');
-        expect(widget.shadowRoot.getElementById('widget').className).toContain('randomimp-widgetsize-large');
+        expect(widget.shadowRoot.getElementById(InternalWidgetID.WIDGET).className).toContain('randomimp-numericfield');
+        expect(widget.shadowRoot.getElementById(InternalWidgetID.WIDGET).className).toContain('randomimp-widgetsize-large');
     });
 
 })
