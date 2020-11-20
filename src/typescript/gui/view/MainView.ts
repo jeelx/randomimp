@@ -9,6 +9,7 @@ class MainView extends LitElement {
 
     public render(): TemplateResult {
         const listgroupValues: string[] = ["text1", "text2", "text3"];
+        const panelValue: string = "Das ist ein ganz langer Text für das Panel, damit es gefüllt ist";
         return html`
             <div>
                 <randomimp-badge count=3></randomimp-badge>
@@ -19,6 +20,7 @@ class MainView extends LitElement {
                 <randomimp-headline title="Headline" subtitle="SubTitle"></randomimp-headline>
                 <randomimp-flowingtext text="Das ist ein ganz langer Fließtext."></randomimp-flowingtext>
                 <randomimp-listgroup .values=${listgroupValues}></randomimp-listgroup>
+                <randomimp-panel .values=${panelValue}></randomimp-panel>
             </div>
         `;
     }

@@ -26,6 +26,6 @@ describe('FlowingText', () => {
         expect(widget.text).toBe('Das ist ein ganz langer Fließtext.');
         expect(widget.shadowRoot.getElementById(InternalWidgetID.WIDGET).classList).toContain('randomimp-flowingtext');
         expect(widget.shadowRoot.getElementById(InternalWidgetID.TEXT).classList).toContain('randomimp-flowingtext-text');
-        expect(widget.shadowRoot.getElementById(InternalWidgetID.TEXT).innerHTML.trimStart().trimEnd()).toBe('Das ist ein ganz langer Fließtext.');
+        expect(widget.shadowRoot.getElementById(InternalWidgetID.TEXT).innerHTML.trim()).toBe('Das ist ein ganz langer Fließtext.');
     })
 })

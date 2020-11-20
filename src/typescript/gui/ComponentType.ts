@@ -7,6 +7,7 @@ enum ComponentType {
     HEADLINE = 'randomimp-headline',
     LISTGROUP = 'randomimp-listgroup',
     NUMERICFIELD = 'randomimp-numericfield',
+    PANEL = 'randomimp-panel',
     TEXTFIELD = 'randomimp-textfield',
     // VIEW
     MAIN_VIEW = 'randomimp-mainview'
