@@ -17,6 +17,7 @@ h5,
 h6,
 p,
 blockquote,
+button,
 pre,
 a,
 code,
@@ -53,6 +54,7 @@ header,
 nav,
 section,
 video {
+  background: none;
   border: 0;
   font: inherit;
   font-family: fa5-proxima-nova,'Helvetica Neue',Helvetica,Arial,sans-serif;
@@ -91,6 +93,7 @@ table { border-collapse: collapse;
 input { appearance: none;
   border-radius: 0; }
 
-input:focus {
+input:focus,
+button:focus {
   outline: none;
 }

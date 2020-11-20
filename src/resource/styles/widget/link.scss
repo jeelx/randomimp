@@ -1,10 +1,7 @@
 @import '../common/reset';
 
-.randomimp-button {
+.randomimp-link {
   align-items: center;
-  background-color: var(--randomimp-background, #0066b3);
-  border-radius: 5px;
-  border-width: 1px;
   display: flex;
   height: 25px;
   justify-content: center;
@@ -22,8 +19,8 @@
     height: 35px;
   }
 
-  .randomimp-button-text {
-    color: #fff;
+  .randomimp-link-text {
+    color: #0066b3;
     font-size: 16px;
   }
 }

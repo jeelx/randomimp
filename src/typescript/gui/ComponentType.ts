@@ -5,6 +5,7 @@ enum ComponentType {
     BUTTONGROUP = 'randomimp-buttongroup',
     FLOWINGTEXT = 'randomimp-flowingtext',
     HEADLINE = 'randomimp-headline',
+    LINK = 'randomimp-link',
     LISTGROUP = 'randomimp-listgroup',
     NUMERICFIELD = 'randomimp-numericfield',
     PANEL = 'randomimp-panel',

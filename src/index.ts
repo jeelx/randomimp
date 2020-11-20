@@ -4,6 +4,7 @@ import './typescript/gui/widget/Button';
 import './typescript/gui/widget/ButtonGroup';
 import './typescript/gui/widget/FlowingText';
 import './typescript/gui/widget/Headline';
+import './typescript/gui/widget/Link';
 import './typescript/gui/widget/ListGroup';
 import './typescript/gui/widget/Numericfield';
 import './typescript/gui/widget/Panel';

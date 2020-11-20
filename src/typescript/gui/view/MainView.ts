@@ -21,6 +21,7 @@ class MainView extends LitElement {
                 <randomimp-flowingtext text="Das ist ein ganz langer Fließtext."></randomimp-flowingtext>
                 <randomimp-listgroup .values=${listgroupValues}></randomimp-listgroup>
                 <randomimp-panel .values=${panelValue}></randomimp-panel>
+                <randomimp-link text="Link"></randomimp-link>
             </div>
         `;
     }
