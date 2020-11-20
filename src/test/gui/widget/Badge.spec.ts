@@ -1,15 +1,26 @@
+import ComponentType from '../../../typescript/gui/ComponentType';
 import Badge from '../../../typescript/gui/widget/Badge';
 import InternalWidgetID from '../../../typescript/gui/widget/InternalWidgetId';
 import WidgetSize from '../../../typescript/interface/WidgetSize';
 
-describe('Badge', () => { 
+describe('Badge', () => {
+    let widget: Badge;
+
+    beforeEach(() => {
+        widget = document.createElement(ComponentType.BADGE) as Badge;
+    });
+
+    afterEach(() => {
+        if (document.body.contains(widget)) {
+            document.body.removeChild(widget);
+        }
+    });
+
     test('should be creatable', () => {
-        const widget: Badge = document.createElement('randomimp-badge') as Badge;
         expect(widget).toBeInstanceOf(Badge);
     });
 
     test('should be rendered correctly', async () => {
-        const widget: Badge = document.createElement('randomimp-badge') as Badge;
         widget.count = 3;
         widget.size = WidgetSize.LARGE;
         window.document.body.appendChild(widget);

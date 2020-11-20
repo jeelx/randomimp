@@ -1,15 +1,26 @@
+import ComponentType from '../../../typescript/gui/ComponentType';
 import Button from '../../../typescript/gui/widget/Button';
 import InternalWidgetID from '../../../typescript/gui/widget/InternalWidgetId';
 import WidgetSize from '../../../typescript/interface/WidgetSize';
 
-describe('Button', () => { 
+describe('Button', () => {
+    let widget: Button;
+
+    beforeEach(() => {
+        widget = document.createElement(ComponentType.BUTTON) as Button;
+    });
+
+    afterEach(() => {
+        if (document.body.contains(widget)) {
+            document.body.removeChild(widget);
+        }
+    });
+
     test('should be creatable', () => {
-        const widget: Button = document.createElement('randomimp-button') as Button;
         expect(widget).toBeInstanceOf(Button);
     });
 
     test('should be rendered correctly', async () => {
-        const widget: Button = document.createElement('randomimp-button') as Button;
         const clickMock: any = jest.fn(); 
         widget.text = 'Buttontext';
         widget.size = WidgetSize.LARGE;

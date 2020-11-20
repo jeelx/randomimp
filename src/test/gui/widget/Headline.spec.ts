@@ -1,18 +1,19 @@
+import ComponentType from '../../../typescript/gui/ComponentType';
 import Headline from '../../../typescript/gui/widget/Headline';
 import InternalWidgetID from '../../../typescript/gui/widget/InternalWidgetId';
 
 describe('Headline', () => {
     let widget: Headline;
 
-    beforeEach(() => { 
-        widget = document.createElement('randomimp-headline') as Headline;
-    })
+    beforeEach(() => {
+        widget = document.createElement(ComponentType.HEADLINE) as Headline;
+    });
 
     afterEach(() => {
-        if (document.body.contains(widget)) { 
+        if (document.body.contains(widget)) {
             document.body.removeChild(widget);
         }
-    })
+    });
 
     test('should be creatable', () => {
         expect(widget).toBeInstanceOf(Headline);

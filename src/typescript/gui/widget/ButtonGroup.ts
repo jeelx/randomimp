@@ -4,8 +4,9 @@ import styles from '../../../resource/styles/widget/buttongroup.scss';
 import ButtonGroupAction from "../../interface/ButtonGroupAction";
 import Logger from "../../util/Logger";
 import InternalWidgetID from "./InternalWidgetId";
+import ComponentType from "../ComponentType";
 
-@customElement('randomimp-buttongroup')
+@customElement(ComponentType.BUTTONGROUP)
 class ButtonGroup extends AbstractWidget { 
 
     @property({ type: Array })

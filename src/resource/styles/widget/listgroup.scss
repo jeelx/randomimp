@@ -1,0 +1,15 @@
+@import '../common/reset';
+
+.randomimp-listgroup {
+    border: 1px solid #0066B3;
+    border-radius: 5px;
+    .randomimp-listgroup-value{
+        padding: 15px;
+        border-bottom: 1px solid #0066b3;
+        font-size: 16px;
+        
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}

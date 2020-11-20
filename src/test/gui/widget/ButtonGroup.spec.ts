@@ -1,15 +1,26 @@
+import ComponentType from '../../../typescript/gui/ComponentType';
 import ButtonGroup from '../../../typescript/gui/widget/ButtonGroup';
 import InternalWidgetID from '../../../typescript/gui/widget/InternalWidgetId';
 import WidgetSize from '../../../typescript/interface/WidgetSize';
 
 describe('ButtonGroup', () => { 
+    let widget: ButtonGroup;
+
+    beforeEach(() => {
+        widget = document.createElement(ComponentType.BUTTONGROUP) as ButtonGroup;
+    });
+
+    afterEach(() => {
+        if (document.body.contains(widget)) {
+            document.body.removeChild(widget);
+        }
+    });
+
     test('should be creatable', () => {
-        const widget: ButtonGroup = document.createElement('randomimp-buttongroup') as ButtonGroup;
         expect(widget).toBeInstanceOf(ButtonGroup);
     });
 
     test('should be rendered correctly', async () => {
-        const widget: ButtonGroup = document.createElement('randomimp-buttongroup') as ButtonGroup;
         widget.size = WidgetSize.LARGE;
         window.document.body.appendChild(widget);
         await widget.updateComplete;

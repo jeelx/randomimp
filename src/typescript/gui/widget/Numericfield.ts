@@ -1,9 +1,10 @@
-import { css, customElement, html, property, TemplateResult, unsafeCSS } from "lit-element";
+import { customElement, html, property, TemplateResult } from "lit-element";
 import AbstractWidget from "../AbstractWidget";
 import styles from '../../../resource/styles/widget/numericfield.scss';
 import InternalWidgetID from "./InternalWidgetId";
+import ComponentType from "../ComponentType";
 
-@customElement('randomimp-numericfield')
+@customElement(ComponentType.NUMERICFIELD)
 class Numericfield extends AbstractWidget {
 
     @property({ type: Number })

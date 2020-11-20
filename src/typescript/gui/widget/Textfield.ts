@@ -2,8 +2,9 @@ import { css, customElement, html, property, TemplateResult, unsafeCSS } from "l
 import AbstractWidget from "../AbstractWidget";
 import styles from '../../../resource/styles/widget/textfield.scss';
 import InternalWidgetID from "./InternalWidgetId";
+import ComponentType from "../ComponentType";
 
-@customElement('randomimp-textfield')
+@customElement(ComponentType.TEXTFIELD)
 class Textfield extends AbstractWidget {
 
     @property({ type: String })

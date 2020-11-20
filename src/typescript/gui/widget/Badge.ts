@@ -1,9 +1,10 @@
 import { css, customElement, html, property, TemplateResult, unsafeCSS } from 'lit-element';
 import styles from '../../../resource/styles/widget/badge.scss';
 import AbstractWidget from '../AbstractWidget';
+import ComponentType from '../ComponentType';
 import InternalWidgetID from './InternalWidgetId';
 
-@customElement('randomimp-badge')
+@customElement(ComponentType.BADGE)
 class Badge extends AbstractWidget {
 
     @property({ type: Number })

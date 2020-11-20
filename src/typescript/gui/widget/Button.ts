@@ -1,9 +1,10 @@
 import { css, customElement, html, property, TemplateResult, unsafeCSS } from 'lit-element';
 import styles from '../../../resource/styles/widget/button.scss';
 import AbstractWidget from '../AbstractWidget';
+import ComponentType from '../ComponentType';
 import InternalWidgetID from './InternalWidgetId';
 
-@customElement('randomimp-button')
+@customElement(ComponentType.BUTTON)
 class Button extends AbstractWidget {
 
     @property({ type: String })
