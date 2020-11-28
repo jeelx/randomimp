@@ -11,6 +11,7 @@ enum ComponentType {
     LISTGROUP = 'randomimp-listgroup',
     NUMERICFIELD = 'randomimp-numericfield',
     PANEL = 'randomimp-panel',
+    PILLS = 'randomimp-pills',
     TEXTFIELD = 'randomimp-textfield',
     // VIEW
     MAIN_VIEW = 'randomimp-mainview'

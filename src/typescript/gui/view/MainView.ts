@@ -24,6 +24,7 @@ class MainView extends LitElement {
                 <randomimp-panel .values=${panelValue}></randomimp-panel>
                 <randomimp-link text="Link"></randomimp-link>
                 <randomimp-enumeration title="Enumeration"></randomimp-enumeration>
+                <randomimp-pills text="Langer Pills Text"></randomimp-pills>
             </div>
         `;
     }

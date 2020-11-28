@@ -10,6 +10,7 @@ import './typescript/gui/widget/Link';
 import './typescript/gui/widget/ListGroup';
 import './typescript/gui/widget/Numericfield';
 import './typescript/gui/widget/Panel';
+import './typescript/gui/widget/Pills';
 import './typescript/gui/widget/Textfield';
 // tslint:disable-next-line: no-submodule-imports
 import fontFaces from '@fortawesome/fontawesome-free/scss/regular.scss';

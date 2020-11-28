@@ -1,0 +1,15 @@
+@import '../common/reset';
+
+.randomimp-pills {
+  background-color: var(--randomimp-background,#0066b3);
+  border-radius: 5px;
+  border-width: 1px;
+  height: 25px;
+  min-width: 25px;
+  color: #fff;
+  font-size: 16px;
+  padding: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-items: center;
+}
