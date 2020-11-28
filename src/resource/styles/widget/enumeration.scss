@@ -1,18 +1,19 @@
 @import '../common/reset';
 
 .randomimp-enumeration {
-    .randomimp-enumeration-title {
-        font-size: 18px;
-        font-weight: 700;
-    }
+  .randomimp-enumeration-title {
+    font-size: 18px;
+    font-weight: 700;
+  }
 
-    ol {
-        list-style-type: decimal;
-        padding-left: 30px;
-        li {
-            font-size: 16px;
-            font-weight: 700;
-            list-style-type: decimal;
-        }
+  ol {
+    list-style-type: decimal;
+    padding-left: 30px;
+
+    li {
+      font-size: 16px;
+      font-weight: 700;
+      list-style-type: decimal;
     }
+  }
 }

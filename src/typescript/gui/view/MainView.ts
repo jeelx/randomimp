@@ -15,6 +15,7 @@ class MainView extends LitElement {
                 <randomimp-badge count=3></randomimp-badge>
                 <randomimp-button text=${'Basic Use'}></randomimp-button>
                 <randomimp-buttongroup></randomimp-buttongroup>
+                <randomimp-emailfield></randomimp-emailfield>
                 <randomimp-numericfield></randomimp-numericfield>
                 <randomimp-textfield></randomimp-textfield>
                 <randomimp-headline title="Headline" subtitle="SubTitle"></randomimp-headline>
