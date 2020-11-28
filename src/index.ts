@@ -2,6 +2,7 @@ import './typescript/gui/view/MainView';
 import './typescript/gui/widget/Badge';
 import './typescript/gui/widget/Button';
 import './typescript/gui/widget/ButtonGroup';
+import './typescript/gui/widget/Enumeration';
 import './typescript/gui/widget/FlowingText';
 import './typescript/gui/widget/Headline';
 import './typescript/gui/widget/Link';

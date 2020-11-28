@@ -3,6 +3,7 @@ enum ComponentType {
     BADGE = 'randomimp-badge',
     BUTTON = 'randomimp-button',
     BUTTONGROUP = 'randomimp-buttongroup',
+    ENUMERATION = 'randomimp-enumeration',
     FLOWINGTEXT = 'randomimp-flowingtext',
     HEADLINE = 'randomimp-headline',
     LINK = 'randomimp-link',
