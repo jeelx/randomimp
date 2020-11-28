@@ -25,6 +25,7 @@ class MainView extends LitElement {
                 <randomimp-link text="Link"></randomimp-link>
                 <randomimp-enumeration title="Enumeration"></randomimp-enumeration>
                 <randomimp-pills text="Langer Pills Text"></randomimp-pills>
+                <randomimp-textarea></randomimp-textarea>
             </div>
         `;
     }
